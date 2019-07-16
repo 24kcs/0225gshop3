@@ -16,7 +16,7 @@ export default {
     }
   },
   // 发送请求获取食品分类信息---
-  async getCategorys({ commit }) {
+  async getCategorys({ commit },cb) {
     // 发送请求获取数据
     const result = await reqCategorys()
     // 判断是否成功
@@ -25,6 +25,7 @@ export default {
       const categorys = result.data
       // 提交,
       commit(RECEIVE_CATEGORYS, categorys)
+      typeof cb ==='function'&&cb()
     }
   },
 

@@ -16,8 +16,9 @@ export default {
     FooterGuide
   },
   mounted() {
-    //向ations提交
-    //this.$store.dispatch("getAddress");
+
+    // 获取地址数据的对象
+    this.$store.dispatch("getAddress");
   }
 };
 </script>

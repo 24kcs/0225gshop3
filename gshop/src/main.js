@@ -6,9 +6,11 @@ import App from './App'
 import router from './router'
 //定义一个全局组件
 import Header from './components/Header/Header.vue'
+import Star from './components/Star/Star.vue'
 //引入store
 import store from './store'
 Vue.component('Header',Header)
+Vue.component('Star',Star)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
