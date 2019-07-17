@@ -89,11 +89,12 @@ export default {
     //   }
     // });
   },
+  
+
   // 计算属性------
   // 1. 获取地址的数据
   computed: {
     ...mapState(["address", "categorys"]),
-
     // 产生一个二维数组
     categorysArr() {
       // 食品分类数据--数组

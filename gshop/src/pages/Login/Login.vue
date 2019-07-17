@@ -69,7 +69,8 @@ export default {
   computed: {
     isRightPhone() {
       return /^1\d{10}$/.test(this.phone);
-    }
+    },
+   
   },
   methods: {
     // 发送验证码
