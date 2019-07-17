@@ -6,7 +6,9 @@
         <i class="iconfont icon-sousuo"></i>
       </span>
       <span class="header_login" slot="right">
-        <span class="header_login_text">登录|注册</span>
+        <span
+          class="header_login_text"
+        >{{user._id?(user.name?(user.name):(user.phone?(user.phone):(' 登录|注册'))):(' 登录|注册')}}</span>
       </span>
     </Header>
     <!--首页导航-->
@@ -89,12 +91,11 @@ export default {
     //   }
     // });
   },
-  
 
   // 计算属性------
   // 1. 获取地址的数据
   computed: {
-    ...mapState(["address", "categorys"]),
+    ...mapState(["address", "categorys", "user"]),
     // 产生一个二维数组
     categorysArr() {
       // 食品分类数据--数组

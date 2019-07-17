@@ -11,6 +11,10 @@ import Star from './components/Star/Star.vue'
 import store from './store'
 //引入validate.js文件
 import './validate.js'
+
+// 引入mint-ui 使用按钮
+import { Button } from 'mint-ui';
+Vue.component(Button.name, Button);
 Vue.component('Header',Header)
 Vue.component('Star',Star)
 Vue.config.productionTip = false

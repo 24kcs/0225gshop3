@@ -22,3 +22,5 @@ export const reqUser = () => ajax(BASE + `/userinfo`)
 
 // 8. 用户登出----退出
 export const reqLoginOut = () => ajax(BASE + `/logout`)
+
+

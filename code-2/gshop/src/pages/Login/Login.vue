@@ -129,6 +129,7 @@
 </template>
 <script>
 import {reqSendCode,reqSmsLogin,reqPwdLogin} from '../../api'
+import {RECEIVE_USER} from '../../store/mutation-types.js'
 export default {
   data() {
     return {
@@ -212,7 +213,10 @@ export default {
         if(result.code===0){
 
           //成功了
+          const user=result.data
           //提交-----更改用户的信息//-------------------坑
+          this.$store.commit(RECEIVE_USER,user)   //---作用---更新用户信息
+          //保存用户信息-------
           //跳转----
           this.$router.replace('/profile')//----显示的用户信息
         }else{
