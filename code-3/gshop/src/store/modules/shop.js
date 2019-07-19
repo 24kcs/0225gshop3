@@ -46,7 +46,10 @@ const actions={
       const info =result.data
       commit(RECEIVE_INFO,{info})
     }
-  }
+  },
+  // xxx(){
+  //   console.log('shop中的action中的xxx方法')
+  // }
 }
 const getters={}
 

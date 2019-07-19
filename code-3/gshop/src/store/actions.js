@@ -5,5 +5,8 @@
 // import { reqAddress, reqCategorys, reqShops, reqLoginOut, reqGoods, reqRatings, reqInfo } from '../api'
 // 总的actions
 export default {
-
+  // 总的actions和shop模块中都有一个xxx的方法
+  // xxx(){
+  //   console.log('总actions中的xxx方法')
+  // }
 }

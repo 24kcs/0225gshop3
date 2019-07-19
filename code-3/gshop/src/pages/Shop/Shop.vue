@@ -3,13 +3,13 @@
     <ShopHeader></ShopHeader>
     <div class="tab">
       <div class="tab-item">
-        <router-link to="/shop/goods">点餐</router-link>
+        <router-link replace to="/shop/goods">点餐</router-link>
       </div>
       <div class="tab-item">
-        <router-link to="/shop/ratings">评价</router-link>
+        <router-link replace to="/shop/ratings">评价</router-link>
       </div>
       <div class="tab-item">
-        <router-link to="/shop/info">商家</router-link>
+        <router-link replace to="/shop/info">商家</router-link>
       </div>
     </div>
     <router-view></router-view>
@@ -23,9 +23,15 @@ export default {
   components: {
     ShopHeader
   },
-  async mounted() {
-    const result = await reqInfo();
-    console.log(result);
+  mounted() {
+    // const result = await reqInfo();
+    // console.log(result);
+    // 直接找action进行提交,获取info的商家数据
+
+    this.$store.dispatch('getInfo')
+
+
+    //this.$store.dispatch('xxx')
   }
 };
 </script>
